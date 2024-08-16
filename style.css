@@ -8,8 +8,8 @@ body{
     min-height: 100vh;
 }
 .container{
-    width: 38%;
-    height: 43vh;
+    min-width: 38%;
+    height: fit-content;
     border-radius: 5px;
     padding: 10px;
     box-shadow: 12px 12px 20px #cbced1,
@@ -37,8 +37,14 @@ body{
     flex-direction: column;
     
 }
+.btns .rows{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
 .btns .rows button{
-    width:80px;
+    /* width:80px; */
+    
     height: 30px;
     border: none;
     border-radius: 8px;
@@ -82,4 +88,10 @@ body{
     box-shadow: inset 5px 5px 8px #2eb82e,
                 inset -5px -5px 8px #33cc33;
     transition: 0.1s;
+}
+@media screen and (max-width:700px){
+    .btns .rows{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
 }
